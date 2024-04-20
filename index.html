@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <form id="header-pesquisa" class="header-input-container">
+            <input id="inputPesquisa" class="input-text" type="text" placeholder="Digite o nome do livro">
+            <button id="btnPesquisa" class="header-button">Pesquisar <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </header>
+
+    <div class="menu-adicionar-container hide">
+
+        <h4 class="add-novo-livro">Adicionar Novo Livro <i class="fa-solid fa-plus"></i></h4>
+
+        <div class="add-nome-livro">
+            <span>Nome do Livro</span>
+            <input id="inputLivro" class="input-edit" type="text" placeholder="Digite o nome do livro">
+        </div>
+
+        <div class="add-autor-livro">
+            <span>Nome do Autor</span>
+            <input id="inputAutor" class="input-edit" type="text" placeholder="Digite o nome do autor">
+        </div>
+
+        <div class="add-imagem-livro">
+            <label id="chooseImage">
+                <input id="imgFile" for="imagem" type="file" accept="image/*">
+                <span class="pictureImage"></span>
+            </label>
+        </div>
+        
+        <div class="menu-button-container">
+            <button id="btn-add" class="menu-button">Adicionar</button>
+            <button id="btn-cancelar" class="menu-button">Cancelar</button>
+        </div>
+    </div>
+
+    <main class="catalogo-container">
+        <div class="catalogo-filters">
+            <div class="catalogo-ordenacao">
+                <i class="fa-solid fa-sort"></i>
+                Alfabético A-Z
+            </div>
+            <h1 class="catalogo-titulo"><i class="fa-solid fa-book"></i> Catálogo de Livros</h1>
+            <button class="catalogo-btn-adicionar">Adicionar novo livro <i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div id="catalogo" class="catalogo-cards-container"></div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
